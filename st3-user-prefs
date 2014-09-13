@@ -1,0 +1,13 @@
+{
+  "bold_folder_labels": true,
+  "color_scheme": "Packages/User/Colorsublime/themes/Darkside_light_selection.tmTheme",
+  "font_size": 14,
+  "highlight_modified_tabs": true,
+  "ignored_packages":
+  [
+    "Vintage"
+  ],
+  "scroll_past_end": true,
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true
+}

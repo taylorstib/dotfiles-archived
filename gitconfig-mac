@@ -1,0 +1,24 @@
+[color]
+  ui = true
+
+[color "status"]
+  added = green
+  changed = red
+  untracked = cyan
+
+[user]
+  name = Taylor Stib
+  email = tstib3@gmail.com
+[credential]
+  helper = osxkeychain
+
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  hist = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%Creset|%C(yellow)%s%Creset%d \" --graph 
+  histg = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%C(yellow)-%Creset%s%C(yellow)%d \" 
+  lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit
+[push]
+  default = current
