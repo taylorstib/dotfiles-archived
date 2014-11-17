@@ -1,0 +1,8 @@
+Alignment
+BracketHighlighter
+ColorPicker
+Git
+HTML-CSS-JS Prettify
+SublimeLinter
+SublimeLinter Ruby
+Theme - Spacegrey
