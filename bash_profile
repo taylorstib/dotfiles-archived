@@ -4,9 +4,9 @@ if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/bin:/usr/local/heroku/bin:$PATH"
 
-### Add for color 
+### Add for color
 export CLICOLOR=1
-export LSCOLORS=cxFxCxDxBxegedabagaced 
+export LSCOLORS=cxFxCxDxBxegedabagaced
 #export LSCOLORS=Exfxcxdxbxegedabagacad #darkblue
 
 ### Aliases
@@ -27,3 +27,5 @@ alias rspec='rspec -c'
 ### Here is the previous shell prompt
 export PS1="\w \n$ "
 # \h:\W \u\$
+
+### gitcom
