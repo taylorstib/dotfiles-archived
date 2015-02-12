@@ -1,7 +1,7 @@
-# [Created by task 2.2.0 1/12/2015 17:07:40]
+# [Created by task 2.4.0 2/11/2015 16:46:20]
 # Taskwarrior program configuration file.
-# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
-# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-color',
+# 'man task-sync' or 'man taskrc'
 
 # Here is an example of entries that use the default, override and blank values
 #   variable=foo   -- By specifying a value, this overrides the default
@@ -14,25 +14,86 @@
 data.location=~/.task
 
 # Color theme (uncomment one to use)
-#include /usr/share/task/light-16.theme
-#include /usr/share/task/light-256.theme
-#include /usr/share/task/dark-16.theme
-#include /usr/share/task/dark-256.theme
-#include /usr/share/task/dark-red-256.theme
-#include /usr/share/task/dark-green-256.theme
-#include /usr/share/task/dark-blue-256.theme
-include /usr/share/task/dark-violets-256.theme
-#include /usr/share/task/dark-yellow-green.theme
-#include /usr/share/task/dark-gray-256.theme
+#include /usr/local/share/doc/task/rc/light-16.theme
+#include /usr/local/share/doc/task/rc/light-256.theme
+include /usr/local/share/doc/task/rc/dark-16.theme
+#include /usr/local/share/doc/task/rc/dark-256.theme
+#include /usr/local/share/doc/task/rc/dark-red-256.theme
+#include /usr/local/share/doc/task/rc/dark-green-256.theme
+#include /usr/local/share/doc/task/rc/dark-blue-256.theme
+#include /usr/local/share/doc/task/rc/dark-violets-256.theme
+#include /usr/local/share/doc/task/rc/dark-yellow-green.theme
+#include /usr/local/share/doc/task/rc/dark-gray-256.theme
+#include /usr/local/share/doc/task/rc/dark-gray-blue-256.theme
+#include /usr/local/share/doc/task/rc/solarized-dark-256.theme
+#include /usr/local/share/doc/task/rc/solarized-light-256.theme
+#include /usr/local/share/doc/task/rc/no-color.theme
 
+include /usr/share/task/holidays.en-US.rc
 #include /usr/share/task/holidays.en-US.rc
-default.command=next
+default.command=ls
 journal.time=on
 calendar.details=full
 calendar.holidays=full
 
-recurrence.limit=2
-nag=There is much to be done
+recurrence.limit=1
+nag=THERE IS MUCH TO BE DONE
 
 report.completed.dateformat=m/d/y h:N
-report.next.dateformat=m/d/y
+
+color.active=rgb445 on gray2
+dateformat.report=m/d/y H:N
+
+## Next Report modifications
+report.next.filter=status:pending limit:page -BLOCKED project.not:HOME
+report.next.columns=id,project,tags,priority,due,due.remaining,description.count,urgency.integer,entry.age
+report.next.labels=ID,Proj,Tags,Pri,Due,Remaining,Description,Urg,Age
+
+## ls report
+report.ls.columns=id,start.active,depends,project,tags,recur.indicator,entry.countdown,due.remaining,until.countdown,description.count
+report.ls.labels=ID,A,Deps,Project,Tags,R,Age,Due,Until,Description
+
+## Oldest report
+report.oldest.columns=id,entry,entry.age,modified.age,depends.indicator,project,tags,recur.indicator,wait.remaining,scheduled.countdown,due,until.age,description
+report.oldest.labels=ID,Created,Age,Mod,D,Project,Tags,R,Wait,Sch,Due,Until,Description
+
+## My custom report ##
+report.home.description=My Custom report
+report.home.filter=status.not:completed status.not:deleted (project:HOME or -work)
+report.home.columns=id,project,description.truncated,status,wait.remaining,depends
+report.home.labels=ID,Proj,Desc,Status,wait,Deps
+report.home.sort=id-
+
+#This line makes searching NOT case sensitive
+search.case.sensitive=no
+
+holiday.en-US23.name=New Year's Day
+holiday.en-US23.date=20150101
+holiday.en-US24.name=MLK Day
+holiday.en-US24.date=20150119
+holiday.en-US25.name=Presidents' Day
+holiday.en-US25.date=20150216
+holiday.en-US26.name=Memorial Day
+holiday.en-US26.date=20150525
+holiday.en-US27.name=Independence Day
+holiday.en-US27.date=20150704
+holiday.en-US28.name=Labor Day
+holiday.en-US28.date=20150907
+holiday.en-US29.name=Columbus Day
+holiday.en-US29.date=20151012
+holiday.en-US30.name=Veterans' Day
+holiday.en-US30.date=20151111
+holiday.en-US31.name=Thanksgiving Day
+holiday.en-US31.date=20151126
+holiday.en-US32.name=Christmas Day
+holiday.en-US32.date=20151225
+holiday.en-US33.name=Mom's Bday
+holiday.en-US33.date=20150226
+holiday.en-US34.name=Dad's Bday
+holiday.en-US34.date=20150512
+holiday.en-US35.name=My Bday
+holiday.en-US35.date=20151007
+holiday.en-US36.name=Kendall's Bday
+holiday.en-US36.date=20151013
+holiday.en-US37.name=Valentine's Day
+holiday.en-US37.date=20150214
