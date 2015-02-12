@@ -1,0 +1,20 @@
+[default]
+defargs = home
+
+[home]
+description = Conditions and forecast at Home(ksdl airport)
+metar= http://weather.noaa.gov/pub/data/observations/metar/decoded/KSDL.TXT
+
+
+
+[phx]
+description = Conditions at Sky Harbor
+metar= http://weather.noaa.gov/pub/data/observations/metar/decoded/KPHX.TXT
+
+[falcon]
+description = Conditions at Falcon Field, Mesa
+metar= http://weather.noaa.gov/pub/data/observations/metar/decoded/KFFZ.TXT
+
+[yale]
+description = weather at Yale University
+metar= http://weather.noaa.gov/pub/data/observations/metar/decoded/KHVN.TXT
