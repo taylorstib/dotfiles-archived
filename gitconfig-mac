@@ -9,16 +9,21 @@
 [user]
   name = Taylor Stib
   email = tstib3@gmail.com
-[credential]
-  helper = osxkeychain
 
 [alias]
   st = status
   ci = commit
   br = branch
   co = checkout
-  hist = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%Creset|%C(yellow)%s%Creset%d \" --graph 
-  histg = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%C(yellow)-%Creset%s%C(yellow)%d \" 
+  hist = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%Creset|%C(yellow)%s%Creset%d \" --graph
+  histg = log --pretty=format:\"%Cred%h%Creset|%Cgreen%ar%Creset|%C(cyan)[%an]%C(yellow)-%Creset%s%C(yellow)%d \"
   lg = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(blue)[%an]%Creset%C(yellow)%d%Creset' --abbrev-commit
+  last = log -1 -p HEAD
+  lol = log -45 --oneline --graph --decorate
+  lola = log -45 --oneline --graph --decorate --all
 [push]
   default = current
+
+[core]
+	editor = nano
+	excludesfile = /Users/taylorstib/.gitignore_global
